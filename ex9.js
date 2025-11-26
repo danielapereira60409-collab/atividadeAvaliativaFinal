@@ -7,6 +7,11 @@ const produtos = [
 	{ produto: 'Caderno', preco: 15 },
 	
 ];
+// Dobra os preços usando map()
+const produtosDobrados = produtos.map(p => ({ produto: p.produto, preco: p.preco * 2 }));
+
+console.log('Produtos com preços dobrados:');
+produtosDobrados.forEach(p => console.log(`- ${p.produto}: R$ ${p.preco}`));
 // Filtra apenas produtos com preço menor que 20
 const baratos = produtos.filter(p => p.preco < 20);
 
